@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-password-encoder" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-simple-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-histrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/application-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/service-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/service-1/service-1-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/service-1/service-1-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/service-2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/service-2/service-2-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-dubbo/service-2/service-2-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-feign-sentinel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-feign-sentinel/common-module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-feign-sentinel/service1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-demo-nacos-feign-sentinel/service2" charset="UTF-8" />
+  </component>
+</project>

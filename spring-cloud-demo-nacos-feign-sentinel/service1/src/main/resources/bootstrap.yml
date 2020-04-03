@@ -1,0 +1,47 @@
+server:
+  port: ${port:56010}
+#为测试启动多个服务提供者
+#VM options:  -Dport=56010
+#VM options:  -Dport=56012
+spring:
+  application:
+    name: service1
+  cloud:
+    nacos:
+
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096  #开发环境
+        cluster-name: DEFAULT
+      config:
+        enabled: true #启用
+#        server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850  #配置中心地址 集群配置方式，或者直接使用域名或虚ip
+        server-addr: 127.0.0.1:8848  #配置中心地址
+
+#nacos配置加载优先级： 内部规则方式 > 扩展方式 > 共享方式
+#内部规则方式
+        file-extension: yaml  #dataId 的名称就是application的name加file-extension   service1.yaml
+        namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096  #开发环境
+        group: TEST_GROUP   #测试组
+
+#扩展方式 [n]越大优先级越高
+        ext-config[0]:
+          data-id: ext-service1.yaml
+          group: TEST_GROUP
+          namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096  #开发环境
+          refresh: true
+        ext-config[1]:
+          data-id: ext2-service1.yaml
+          group: TEST_GROUP
+          namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096  #开发环境
+          refresh: true
+        ext-config[2]:
+          data-id: ext3-service1.yaml
+          group: TEST_GROUP
+          namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096  #开发环境
+          refresh: true
+
+
+#共享方式
+#        shared-dataids: ext-service1.yaml,ext2-service1.yaml,ext3-service1.yaml #只在默认组，命名空间
+#        refreshable-dataids: ext-service1.yaml    # shared-dataids和refreshable-dataids 组合 不常用

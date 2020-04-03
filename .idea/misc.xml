@@ -10,6 +10,20 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/password-encoder/pom.xml" />
         <option value="$PROJECT_DIR$/nacos-simple-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/service1/pom.xml" />
+        <option value="$PROJECT_DIR$/service2/pom.xml" />
+        <option value="$PROJECT_DIR$/common-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/application-1/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/service-1/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/service-2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/service-1/service-1-api/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/service-1/service-1-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/service-2/service-2-api/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-dubbo/service-2/service-2-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-histrix-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-nacos-feign-sentinel/pom.xml" />
       </list>
     </option>
   </component>

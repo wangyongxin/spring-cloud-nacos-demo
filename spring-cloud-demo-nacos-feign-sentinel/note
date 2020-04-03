@@ -1,0 +1,16 @@
+1. 实现了nacos 加密调用,覆盖java文件
+com.alibaba.nacos.client.security.SecurityProxy
+
+2. 基于 org.springframework.cloud 包下的 nacos 进行 整合
+
+3. nacos 配置 及自动刷新配置测试
+    nacos各种配置方式测试
+
+4. nacos 服务注册与发现测试
+
+5. feign 整合 nacos 远程调用测试、RestTemplate 远程调用测试：
+service1 作为服务提供者
+service2 作为服务消费者
+（包含对象类型返回测试）
+
+6. feign 整合 nacos 及 sentinel 开启熔断fallback测试

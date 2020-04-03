@@ -1,0 +1,14 @@
+1. 此模块实现了 dubbo 注册 nacos
+
+2. 实现了nacos 加密调用,覆盖java文件
+com.alibaba.nacos.client.security.SecurityProxy
+
+3. 基于 org.springframework.cloud 包下的 nacos 进行 整合 dubbo， 是nacos官方网站示例
+发现其他开发者使用的是 com.alibaba.cloud 包下的 nacos 整合其他
+
+4. dubbo 远程调用
+   服务消费者 application-1
+   服务提供者 service-1-server （提供 dubbo netty服务 未提供http接口）
+   公共API   service-1-api
+
+5. 可在nacos 服务中查看dubbo注册的服务

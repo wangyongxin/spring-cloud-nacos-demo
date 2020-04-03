@@ -1,0 +1,99 @@
+server:
+  port: 56020
+  servlet:
+    context-path: /application1
+
+spring:
+  application:
+    name: application1
+  main:
+    allow-bean-definition-overriding: true  # Spring Boot 2.1  需要设定
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096
+        cluster-name: DEFAULT
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096
+        group: SPRING_CLOUD_NACOS_DUBBO_GROUP
+    # 使用 Sentinel 作为熔断器
+#    sentinel:
+#      transport:
+#        port: 8721
+#        dashboard: localhost:8096
+#      # 设置Sentinel Nacos数据源配置
+#      datasource:
+#        #其中flow是数据源名，可以自行随意修改
+#        flow:
+#          nacos:
+#            server-addr: 127.0.0.1:8848
+#            data-id: ${spring.application.name}-flow-rules
+#            groupId: DEFAULT_GROUP
+#            # 规则类型，取值见：
+#            # org.springframework.cloud.alibaba.sentinel.datasource.RuleType
+#            # 配置后报错提示：Type 'com.alibaba.cloud.sentinel.datasource.config.NacosDataSourceProperties' has no property 'rule-type' ， 以为哪里配置错了或版本不对， 最后发现忽略即可， 项目可正常启动
+#            rule-type: flow
+#            #在nacos配置列表中添加配置application1-flow-rules
+#            #nacos中的规则会自动同步到sentinel控制台的流控规则中
+#            #            [
+#            #                {
+#            #                    "app":"application1",
+#            #                    "resource":"com.autoee.busi.service.EchoService:echo(java.lang.String)",
+#            #                    "limitApp":"default",
+#            #                    "grade":1,
+#            #                    "count":1,
+#            #                    "strategy":0,
+#            #                    "controlBehavior":0,
+#            #                    "clusterMode":false
+#            #                }
+#            #            ]
+#
+##        degrade:
+##          nacos:
+##            server-addr: localhost:8848
+##            dataId: ${spring.application.name}-degrade-rules
+##            groupId: SENTINEL_GROUP
+##            rule-type: degrade
+##        system:
+##          nacos:
+##            server-addr: localhost:8848
+##            dataId: ${spring.application.name}-system-rules
+##            groupId: SENTINEL_GROUP
+##            rule-type: system
+##        authority:
+##          nacos:
+##            server-addr: localhost:8848
+##            dataId: ${spring.application.name}-authority-rules
+##            groupId: SENTINEL_GROUP
+##            rule-type: authority
+##        param-flow:
+##          nacos:
+##            server-addr: localhost:8848
+##            dataId: ${spring.application.name}-param-flow-rules
+##            groupId: SENTINEL_GROUP
+##            rule-type: param-flow
+
+
+dubbo:
+#  scan:
+#    #dubbo 服务扫描基准包
+#    base-packages: com.wangyx.service1.service
+#  protocol:
+#    #dubbo 协议 dubbo、rmi、hessian
+#    name: dubbo
+#    #dubbo 协议端口
+#    port: ${dubbo_port:20881}
+  registry:
+    address: nacos://127.0.0.1:8848
+    parameters:
+      namespace: 8b3b7bbb-49f2-42fa-bd74-843b25241096
+#  application:
+#    qos-enable: false #dubbo运维服务是否开启
+#  consumer:
+#    check: false  #启动时是否检查依赖的服务
+#  cloud:
+    # 用于服务消费方订阅服务提供方的应用名称的列表，若需订阅多应用，使用 "," 分割。 不推荐使用默认值为 "*"，它将订阅所有应用
+#    subscribed-services: service1

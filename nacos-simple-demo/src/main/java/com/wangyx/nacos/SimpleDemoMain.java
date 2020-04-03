@@ -41,8 +41,8 @@ public class SimpleDemoMain {
         Properties properties = new Properties();
         properties.put("serverAddr", serverAddr);
         properties.put("namespace", namespace);
-        properties.put("username", "nacos");
-        properties.put("password", "nacos");
+//        properties.put("username", "test");
+//        properties.put("password", "123456");
 
         ConfigService configService = NacosFactory.createConfigService(properties);
         //获取配置 String dataId, String group, long timeoutMs
